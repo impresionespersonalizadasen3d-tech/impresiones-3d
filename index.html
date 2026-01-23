@@ -3,157 +3,191 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Impresiones Personalizadas 3D</title>
+<title>Impresión 3D Personalizada</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    background: #f4f6f8;
+body{
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background-color: #f8f9fa;
 }
 
-header {
-    background: linear-gradient(135deg, #1e3c72, #2a5298);
+/* HERO */
+.hero{
+    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    url("https://images.unsplash.com/photo-1581090700227-1e37b190418e");
+    background-size: cover;
+    background-position: center;
     color: white;
-    padding: 50px 20px;
+    padding: 140px 20px;
     text-align: center;
 }
 
-header h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+/* CARDS */
+.card{
+    border: none;
+    border-radius: 15px;
+    transition: transform .3s;
+}
+.card:hover{
+    transform: translateY(-5px);
 }
 
-nav {
-    background: #222;
-    padding: 15px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #4da3ff;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-    background: white;
-    margin-top: 30px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-h2 {
-    color: #1e3c72;
-    margin-bottom: 15px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.gallery img {
-    width: 250px;
-    height: 250px;
+/* GALERIA */
+.gallery-img{
+    height: 230px;
     object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
+    border-radius: 15px;
+}
 
-footer {
+/* FOOTER */
+footer{
     background: #1e3c72;
     color: white;
-    text-align: center;
-    padding: 20px;
-    margin-top: 50px;
 }
 </style>
 </head>
 
 <body>
 
-<header>
-<h1>Impresionate en 3D</h1>
-<p>Transformamos ideas en piezas reales mediante tecnología 3D</p>
-</header>
-
-<nav>
-<a href="#nosotros">Nosotros</a>
-<a href="#servicios">Servicios</a>
-<a href="#proceso">Proceso</a>
-<a href="#galeria">Galería</a>
-<a href="#contacto">Contacto</a>
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#">Impresión 3D</a>
+    <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+        <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+        <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
+        <li class="nav-item">
+          <a class="btn btn-primary rounded-pill ms-3" href="#contacto">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 </nav>
 
-<section id="nosotros">
-<h2>¿Quiénes somos?</h2>
-<p>
-Somos estudiantes de Ingeniería apasionados por la tecnología y la fabricación digital.
-Nuestro emprendimiento nace con el objetivo de ofrecer servicios de impresión 3D,
-aplicando nuestros conocimientos técnicos para crear piezas funcionales, decorativas
-y personalizadas para el público en general.
-</p>
-<p>
-Trabajamos con compromiso, precisión y creatividad, utilizando impresoras 3D de alta
-calidad y materiales confiables para garantizar resultados duraderos y profesionales.
-</p>
-</section>
+<!-- HERO -->
+<header class="hero">
+    <div class="container">
+        <h1 class="display-4 fw-bold">Impresión 3D Personalizada</h1>
+        <p class="lead mt-3">Convertimos tus ideas en piezas reales con precisión y creatividad</p>
+        <a href="#contacto" class="btn btn-primary btn-lg rounded-pill mt-4">Cotizar Proyecto</a>
+    </div>
+</header>
 
-<section id="servicios">
-<h2>Servicios</h2>
-<ul>
-<li>Diseño y modelado 3D personalizado</li>
-<li>Impresión de figuras decorativas y coleccionables</li>
-<li>Piezas funcionales y repuestos</li>
-<li>Prototipos para proyectos académicos y personales</li>
-<li>Impresión en PLA, PETG y otros materiales</li>
-</ul>
-</section>
-
-<section id="proceso">
-<h2>Proceso de Trabajo</h2>
-<ol>
-<li>Nos envías tu idea, boceto o imagen.</li>
-<li>Realizamos el diseño o adaptamos el modelo 3D.</li>
-<li>Te mostramos una vista previa para aprobación.</li>
-<li>Imprimimos la pieza con los mejores parámetros.</li>
-<li>Realizamos acabados si el cliente lo solicita.</li>
-<li>Entrega del producto final.</li>
-</ol>
-</section>
-
-<section id="galeria">
-<h2>Galería de Trabajos</h2>
-<p>Algunos de nuestros trabajos realizados en impresión 3D:</p>
-
-<div class="gallery">
-    <img src="./images/corazonesfiguras.jpeg" alt="Figuras de corazones impresas en 3D">
-    <img src="./images/espadasfiguras.jpeg" alt="Espadas impresas en 3D">
-    <img src="./images/tntfiguras.jpeg" alt="Figuras TNT impresas en 3D">
+<!-- NOSOTROS -->
+<section id="nosotros" class="py-5 bg-white">
+<div class="container">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">¿Quiénes Somos?</h2>
+        <p class="text-muted">Pasión por la tecnología y la fabricación digital</p>
+    </div>
+    <p class="lead text-center">
+        Somos estudiantes de Ingeniería especializados en impresión 3D. 
+        Creamos piezas funcionales, decorativas y prototipos con materiales de alta calidad,
+        cuidando cada detalle para entregar resultados profesionales.
+    </p>
 </div>
 </section>
 
-<section id="contacto">
-<h2>Contacto</h2>
-<p>¿Tienes una idea o proyecto en mente? ¡Contáctanos!</p>
-<p><strong>Email:</strong> Impresionespersonalizadasen3D@gmail.com</p>
-<p><strong>WhatsApp:</strong> +593 959 529 196</p>
+<!-- SERVICIOS -->
+<section id="servicios" class="py-5 bg-light">
+<div class="container">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Nuestros Servicios</h2>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center p-4">
+                <h5 class="fw-bold">Diseño 3D</h5>
+                <p class="text-muted">Modelado personalizado según tu idea o boceto.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center p-4">
+                <h5 class="fw-bold">Impresión 3D</h5>
+                <p class="text-muted">Piezas en PLA, PETG y otros materiales.</p>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm text-center p-4">
+                <h5 class="fw-bold">Prototipos</h5>
+                <p class="text-muted">Soluciones para proyectos académicos y personales.</p>
+            </div>
+        </div>
+    </div>
+</div>
 </section>
 
-<footer>
-<p>© 2025 Impresiones Personalizadas en 3D</p>
+<!-- PROCESO -->
+<section id="proceso" class="py-5 bg-white">
+<div class="container">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Proceso de Trabajo</h2>
+    </div>
+    <div class="row text-center g-4">
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm">1️⃣ Envío de idea</div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm">2️⃣ Diseño 3D</div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm">3️⃣ Impresión</div>
+        </div>
+        <div class="col-md-3">
+            <div class="card p-3 shadow-sm">4️⃣ Entrega</div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- GALERIA -->
+<section id="galeria" class="py-5 bg-light">
+<div class="container">
+    <div class="text-center mb-5">
+        <h2 class="fw-bold">Galería de Trabajos</h2>
+    </div>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <img src="./images/corazonesfiguras.jpeg" class="img-fluid gallery-img shadow">
+        </div>
+        <div class="col-md-4">
+            <img src="./images/espadasfiguras.jpeg" class="img-fluid gallery-img shadow">
+        </div>
+        <div class="col-md-4">
+            <img src="./images/tntfiguras.jpeg" class="img-fluid gallery-img shadow">
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- CONTACTO -->
+<section id="contacto" class="py-5 bg-white">
+<div class="container">
+    <div class="text-center mb-4">
+        <h2 class="fw-bold">Contacto</h2>
+        <p class="text-muted">¿Tienes un proyecto en mente?</p>
+    </div>
+    <div class="text-center">
+        <p><strong>Email:</strong> Impresionespersonalizadasen3D@gmail.com</p>
+        <p><strong>WhatsApp:</strong> +593 959 529 196</p>
+    </div>
+</div>
+</section>
+
+<footer class="py-4 text-center">
+    <p class="mb-0">© 2025 Impresiones Personalizadas en 3D</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
