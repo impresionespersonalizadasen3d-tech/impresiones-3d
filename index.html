@@ -9,31 +9,43 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
 <style>
+/* GENERAL */
 body{
     font-family: 'Segoe UI', system-ui, sans-serif;
     background-color: #000;
     color: #fff;
 }
 
+/* TEXTOS */
+.text-muted{
+    color: #b5b5b5 !important;
+}
+
 /* HERO */
 .hero{
-    background: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)),
+    background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)),
     url("https://images.unsplash.com/photo-1581090700227-1e37b190418e");
     background-size: cover;
     background-position: center;
-    color: white;
     padding: 140px 20px;
     text-align: center;
 }
 
+/* SECCIONES */
+section{
+    background-color: #000;
+}
+
 /* CARDS */
 .card{
-    border: none;
+    background-color: #111;
+    border: 1px solid #222;
     border-radius: 15px;
+    color: #fff;
     transition: transform .3s;
 }
 .card:hover{
-    transform: translateY(-5px);
+    transform: translateY(-6px);
 }
 
 /* GALERIA */
@@ -43,10 +55,16 @@ body{
     border-radius: 15px;
 }
 
+/* VIDEOS */
+video{
+    border-radius: 20px;
+    border: 1px solid #333;
+}
+
 /* FOOTER */
 footer{
-    background: #1e3c72;
-    color: white;
+    background: #0d1b2a;
+    color: #fff;
 }
 </style>
 </head>
@@ -65,6 +83,7 @@ footer{
         <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
         <li class="nav-item"><a class="nav-link" href="#servicios">Servicios</a></li>
         <li class="nav-item"><a class="nav-link" href="#proceso">Proceso</a></li>
+        <li class="nav-item"><a class="nav-link" href="#videos">Proceso Real</a></li>
         <li class="nav-item"><a class="nav-link" href="#galeria">Galería</a></li>
         <li class="nav-item">
           <a class="btn btn-primary rounded-pill ms-3" href="#contacto">Contacto</a>
@@ -78,28 +97,32 @@ footer{
 <header class="hero">
     <div class="container">
         <h1 class="display-4 fw-bold">Impresión 3D Personalizada</h1>
-        <p class="lead mt-3">Convertimos tus ideas en piezas reales con precisión y creatividad</p>
-        <a href="#contacto" class="btn btn-primary btn-lg rounded-pill mt-4">Cotizar Proyecto</a>
+        <p class="lead mt-3">
+            Convertimos ideas en piezas reales mediante tecnología de manufactura aditiva
+        </p>
+        <a href="#contacto" class="btn btn-primary btn-lg rounded-pill mt-4">
+            Cotizar Proyecto
+        </a>
     </div>
 </header>
 
 <!-- NOSOTROS -->
-<section id="nosotros" class="py-5 bg-white">
+<section id="nosotros" class="py-5">
 <div class="container">
     <div class="text-center mb-5">
         <h2 class="fw-bold">¿Quiénes Somos?</h2>
-        <p class="text-muted">Pasión por la tecnología y la fabricación digital</p>
+        <p class="text-muted">Emprendimiento tecnológico basado en impresión 3D</p>
     </div>
     <p class="lead text-center">
-        Somos estudiantes de Ingeniería especializados en impresión 3D. 
-        Creamos piezas funcionales, decorativas y prototipos con materiales de alta calidad,
-        cuidando cada detalle para entregar resultados profesionales.
+        Somos estudiantes de Ingeniería especializados en impresión 3D.
+        Desarrollamos figuras personalizadas, piezas funcionales y prototipos
+        aplicando criterios técnicos, creatividad y control de calidad.
     </p>
 </div>
 </section>
 
 <!-- SERVICIOS -->
-<section id="servicios" class="py-5 bg-light">
+<section id="servicios" class="py-5">
 <div class="container">
     <div class="text-center mb-5">
         <h2 class="fw-bold">Nuestros Servicios</h2>
@@ -108,19 +131,25 @@ footer{
         <div class="col-md-4">
             <div class="card h-100 shadow-sm text-center p-4">
                 <h5 class="fw-bold">Diseño 3D</h5>
-                <p class="text-muted">Modelado personalizado según tu idea o boceto.</p>
+                <p class="text-muted">
+                    Modelado digital optimizado según el uso de la pieza.
+                </p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card h-100 shadow-sm text-center p-4">
                 <h5 class="fw-bold">Impresión 3D</h5>
-                <p class="text-muted">Piezas en PLA, PETG y otros materiales.</p>
+                <p class="text-muted">
+                    Fabricación en PLA, PETG y materiales técnicos.
+                </p>
             </div>
         </div>
         <div class="col-md-4">
             <div class="card h-100 shadow-sm text-center p-4">
                 <h5 class="fw-bold">Prototipos</h5>
-                <p class="text-muted">Soluciones para proyectos académicos y personales.</p>
+                <p class="text-muted">
+                    Soluciones para proyectos académicos y comerciales.
+                </p>
             </div>
         </div>
     </div>
@@ -128,28 +157,21 @@ footer{
 </section>
 
 <!-- PROCESO -->
-<section id="proceso" class="py-5 bg-white">
+<section id="proceso" class="py-5">
 <div class="container">
     <div class="text-center mb-5">
         <h2 class="fw-bold">Proceso de Trabajo</h2>
     </div>
     <div class="row text-center g-4">
-        <div class="col-md-3">
-            <div class="card p-3 shadow-sm">1️⃣ Envío de idea</div>
-        </div>
-        <div class="col-md-3">
-            <div class="card p-3 shadow-sm">2️⃣ Diseño 3D</div>
-        </div>
-        <div class="col-md-3">
-            <div class="card p-3 shadow-sm">3️⃣ Impresión</div>
-        </div>
-        <div class="col-md-3">
-            <div class="card p-3 shadow-sm">4️⃣ Entrega</div>
-        </div>
+        <div class="col-md-3"><div class="card p-3">1️⃣ Idea</div></div>
+        <div class="col-md-3"><div class="card p-3">2️⃣ Diseño</div></div>
+        <div class="col-md-3"><div class="card p-3">3️⃣ Impresión</div></div>
+        <div class="col-md-3"><div class="card p-3">4️⃣ Entrega</div></div>
     </div>
 </div>
 </section>
 
+<!-- VIDEOS -->
 <!-- VIDEOS DEL PROCESO -->
 <section id="videos" class="py-5 bg-light">
 <div class="container">
@@ -235,13 +257,14 @@ footer{
                 <li>🔹 Obtienes amor al arte</li>
                 <li>🔹 Que pones actualizarnos con la tecnologia</li>
             </ul>
+
+        </div>
     </div>
 </div>
 </section>
 
-
 <!-- GALERIA -->
-<section id="galeria" class="py-5 bg-light">
+<section id="galeria" class="py-5">
 <div class="container">
     <div class="text-center mb-5">
         <h2 class="fw-bold">Galería de Trabajos</h2>
@@ -261,16 +284,12 @@ footer{
 </section>
 
 <!-- CONTACTO -->
-<section id="contacto" class="py-5 bg-white">
-<div class="container">
-    <div class="text-center mb-4">
-        <h2 class="fw-bold">Contacto</h2>
-        <p class="text-muted">¿Tienes un proyecto en mente?</p>
-    </div>
-    <div class="text-center">
-        <p><strong>Email:</strong> Impresionespersonalizadasen3D@gmail.com</p>
-        <p><strong>WhatsApp:</strong> +593 959 529 196</p>
-    </div>
+<section id="contacto" class="py-5">
+<div class="container text-center">
+    <h2 class="fw-bold mb-3">Contacto</h2>
+    <p class="text-muted">¿Tienes un proyecto en mente?</p>
+    <p><strong>Email:</strong> Impresionespersonalizadasen3D@gmail.com</p>
+    <p><strong>WhatsApp:</strong> +593 959 529 196</p>
 </div>
 </section>
 
@@ -281,12 +300,3 @@ footer{
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
